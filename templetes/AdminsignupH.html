@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Sign-Up</title>
+    <title>Admin sign up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <style>
     body {
-        width: 50%;
-        background-color: black;
+        width: 550px;
+        background-color: whitesmoke;
         padding: 0;
         /* margin: 0;
 
@@ -19,49 +19,51 @@
         /* background-image: url('clge.jpg'); */
         background-repeat: no-repeat;
     }
-    
     #video-background {
-        position: fixed;
-        right: 0;
-        /* top: 50px; */
-        bottom: 0;
-        z-index: -1;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
     }
     
-    label {
-        color: whitesmoke;
+    label
+    {
+      color: whitesmoke;
     }
+    
+    
 </style>
 
 <body>
-    <video autoplay muted loop id="video-background" width="100%">
+    <video autoplay muted loop id="video-background">
         <source src="/static/last.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video> {% if messages %} {% for message in messages %}
+    </video>
+    <!-- {% if messages %} {% for message in messages %} -->
     <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
-        <strong>{{ message }}</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+        <!-- <strong>{{ message }}</strong> -->
+        <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
-      </button>
+      </button> -->
     </div>
-
-    {% endfor %} {% endif %}
+    
+    <!-- {% endfor %} {% endif %} -->
     <section class="vh-100 bg-image">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-
-
+            
+        
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6" style="height: 1000px;margin-bottom:0;width: 510px;">
                         <!-- kinda nunchi height -->
-
-                        <div class="card" style="border-radius: 15px;background-color:black; ">
-                            <div class="card-body p-5" style="height: 900px; ">
+                        
+                        <div class="card"  style="border-radius: 15px;background-color:black; box-shadow: 0 0 10px 5px #48abe0; ">
+                            <div class="card-body p-5" style="height: 900px; ">  
                                 <!-- card size -->
-                                <h2 class="text-uppercase text-center mb-5" style="color: whitesmoke;">Create an account</h2>
+                                <h2 class="text-uppercase text-center mb-5" style="color: whitesmoke;" >Create an account</h2>
 
                                 <form method="POST" action="/asignup">
-                                    {%csrf_token%}
+                                    <!-- {%csrf_token%} -->
 
                                     <div class="form-outline mb-4">
                                         <input type="text" id="collegename" name="collegename" class="form-control form-control-lg" />
@@ -103,7 +105,7 @@
                                         <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" style="background-color: grey;"><span style="color: whitesmoke;">Register</span></button>
                                     </div>
 
-                                    <p class="text-center text-muted mt-5 mb-0"><span style="color: whitesmoke;">Have already an account? </span><a href="/alogin" class="fw-bold text-body"><u style="color: whitesmoke;">Login here</u></a></p>
+                                    <p  class="text-center text-muted mt-5 mb-0"><span style="color: whitesmoke;">Have already an account? </span><a href="/templetes/U_login.html" class="fw-bold text-body"><u style="color: whitesmoke;">Login here</u></a></p>
                                 </form>
 
                             </div>
@@ -112,10 +114,10 @@
                 </div>
             </div>
         </div>
-
-        <!-- <h1 class="clgname">Gokaraju Rangaraju Insitute Of Engineering And Technology</h1> -->
+        
+    <!-- <h1 class="clgname">Gokaraju Rangaraju Insitute Of Engineering And Technology</h1> -->
     </section>
-
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!-- <div>
