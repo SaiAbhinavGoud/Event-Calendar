@@ -8,6 +8,11 @@ from django.contrib.auth import login as auth_login
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as django_logout
+from import_export.resources import ModelResource
+import csv 
+from django.db.models import fields
+from django.contrib import admin
+from django.urls import reverse 
 
 #calendar start
 
@@ -168,4 +173,15 @@ def acalendar(request):
 #  u calendar
 def ueventcal(request):
     return render(request,'usercal.html')
-
+#exporting registered students into a csv file
+class StudentAdmin(admin.ModelAdmin):
+    def export_data(self,request,queryset):
+        filename = 'students.csv'
+        response = HttpResponse(content_type = 'text/csv')
+        response['Content-Disposition'] = 'attachment; filename = %s'%filename
+        writer = csv.writer(response)
+        for obj in queryset:
+            row = [getattr(obj,field.name) for field in obj._meta.fields]
+            writer.writerow(row)
+        return response
+    actions = ['export_data']
