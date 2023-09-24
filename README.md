@@ -1,30 +1,5 @@
 
 
-**INDEX**	 
-
-|No. |Table of Contents |Page Number |
-| :- | :- | :- |
-|1 |**Problem Statement** |3 |
-|2 |**Introduction to the concepts** |4 |
-|3 |**Advantages and Limitations** |6 |
-|4 |**Code** |8 |
-|5 |**Results** |11 |
-|6 |**Case Study** |13 |
-**
-
-**
-
-
-
-
-
-
-
-
-
-
-
-
 **Problem Statement** 
 
 
