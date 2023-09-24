@@ -1,6 +1,6 @@
 
 
-`                                                   `**INDEX**	 
+**INDEX**	 
 
 |No. |Table of Contents |Page Number |
 | :- | :- | :- |
